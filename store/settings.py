@@ -127,3 +127,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Users
 AUTH_USER_MODEL = 'users.User'
+
+#
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'django@store.ru'
+EMAIL_HOST_PASSWORD = 'store'
+EMAIL_USE_SSL = False
+DOMAIN_NAME = 'localhost'
+
+#Celery & Redis
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
